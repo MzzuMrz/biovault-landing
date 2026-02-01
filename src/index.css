@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+
+/*
+ * BioVault Design System
+ * Based on bioWORLD branding guidelines
+ */
+
+@theme {
+  /* ========== COLORS ========== */
+
+  /* Base Colors */
+  --color-cream: #f6f1e6;
+  --color-gray: #9eacb9;
+  --color-dark: #1b2229;
+
+  /* Principal Colors */
+  --color-navy: #153963;
+  --color-emerald: #1fa678;
+
+  /* Accent Colors */
+  --color-mint: #7ef2c9;
+  --color-sky: #5f9dff;
+  --color-terracotta: #d8854a;
+
+  /* Extended Palette */
+  --color-purple: #a78bfa;
+  --color-coral: #f28c8c;
+  --color-gold: #f4c36a;
+
+  /* Product Colors (bioWORLD ecosystem) */
+  --color-vault: #1b2229;
+  --color-insights: #d8854a;
+  --color-numa: #1fa678;
+  --color-bridge: #5f9dff;
+
+  /* ========== TYPOGRAPHY ========== */
+  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+  --font-body:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+}
+
+/* ========== BASE STYLES ========== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== FOCUS STATES (A11Y) ========== */
+
+:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+/* ========== SELECTION ========== */
+
+::selection {
+  background-color: var(--color-navy);
+  color: var(--color-cream);
+}
+
+/* ========== REDUCED MOTION (A11Y) ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========== SKIP LINK (A11Y) ========== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus,
+.sr-only.focus\:not-sr-only:focus {
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}

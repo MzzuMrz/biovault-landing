@@ -1,0 +1,6 @@
+export { Hero } from './Hero'
+export { Problem } from './Problem'
+export { Pillars } from './Pillars'
+export { Features } from './Features'
+export { Stakeholders } from './Stakeholders'
+export { CTA } from './CTA'
